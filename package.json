@@ -1,0 +1,20 @@
+{
+  "name": "dia-td1",
+  "version": "1.0.0",
+  "description": "TD1 du cours de développement et déploiement d'applications distribuées.",
+  "main": "client.js",
+  "scripts": {
+    "test": "node client.js",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dreimert/dia-td1.git"
+  },
+  "author": "Damien Reimert",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dreimert/dia-td1/issues"
+  },
+  "homepage": "https://github.com/dreimert/dia-td1#readme"
+}
