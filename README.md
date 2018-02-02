@@ -37,3 +37,9 @@ Vous pouvez tester directement via :
 Ou en utilisant des tests déjà écrits par moi-même :
 
     npm test
+
+## Pour aller plus loin
+
+Les tests que j'ai écrit sont assez basiques. Que ce passe t'il, s'il y a un `\n` dans la chaine de caractères ? Si vous supprimez une valeur qui n'existe pas ? S'il y a des caractères spéciaux dans vos chaines ?
+
+Étendre les tests pour prendre en compte plus de cas.

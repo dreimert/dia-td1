@@ -26,13 +26,14 @@ const createClient = () => {
 let client;
 
 const write = (command) => () => {
+  console.log(">>>", command);
   client.write(command + '\n');
 }
 
 const read = (func) => () => {
   return new Promise((resolve, reject) => {
     client.once('data', (data) => {
-      console.log(data.toString());
+      console.log("<<<", data.toString());
       func(data, resolve, reject);
     });
   })
