@@ -4,6 +4,17 @@ TD1 du cours de développement et déploiement d'applications distribuées.
 
 L'objectif de ce TD est de développer un serveur TCP minimaliste répondant à des commandes textes en utilisant Node.js.
 
+## Installation de node
+
+Télécherger les binaires depuis : https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
+
+    wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
+    tar -xJvf node-v8.9.4-linux-x64.tar.xz
+
+Pour exécuter node, ajouter le binaire dans votre path ou :
+
+    ./node-v8.9.4-linux-x64/bin/node
+
 ## Protocole
 
 Le protocole est en texte et il utilise le port 8123 en TCP. C'est un cache mémoire sur un modèle clé / valeur qui propose les commandes suivantes :
@@ -12,16 +23,6 @@ Le protocole est en texte et il utilise le port 8123 en TCP. C'est un cache mém
 * `PUT <key> <data-length> <data>\n` : stocke une chaine de caractères `<data>` de taille `<data-length>`dans la clé `<key>`. Renvoie au client `ok\n` en cas de succès ou `ko\n` sinon;
 * `GET <key>\n` : pour la clé `<key>` renvoie au client la longueur de la chaine de caractères associé suivie d’un saut de ligne puis la chaine associé. Renvoie `0\n` si la clé est inexistante;
 * `DEL <key>\n` : supprime la clé / valeur `<key>`. Renvoie au client `ok\n` en cas de succès ou `ko\n` sinon.
-
-## Docker
-
-Construire et lancer l'image Docker
-
-    docker build -t dia .
-    docker create -it --name dia -v /tmp/dia:/usr/src/app  dia bash
-    docker start -ai dia
-
-Copier les fichiers dans /tmp/dia
 
 ## Implémentation
 
@@ -33,10 +34,9 @@ En Node.js, la librairie standard ***net*** permet de manipuler facilement les s
 
 Vous pouvez implémenter votre serveur dans le fichier `server.js`.
 
-J'ai configuré pour vous ce dépôt pour que les modifications que vous faites dans le fichier `server.js` recharge automatiquement le serveur. Dans un terminal, lancer les commandes suivantes :
+Pour lancer le server :
 
-    npm install
-    npm start
+    node server.js
 
 `npm install` va installer les dépendances listées dans le `package.json`. Dans notre cas, `nodemon` qui permet de recharger un fichier quand il est modifié.
 
@@ -50,7 +50,7 @@ Vous pouvez tester directement via :
 
 Ou en utilisant des tests déjà écrits par moi-même :
 
-    npm test
+    node client.js
 
 ## Ce que je dois retenir
 
