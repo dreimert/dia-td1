@@ -18,8 +18,10 @@ Le protocole est en texte et il utilise le port 8123 en TCP. C'est un cache mém
 Construire et lancer l'image Docker
 
     docker build -t dia .
-    docker create -it --name dia  dia bash
+    docker create -it --name dia -v /tmp/dia:/usr/src/app  dia bash
     docker start -ai dia
+
+Copier les fichiers dans /tmp/dia
 
 ## Implémentation
 
