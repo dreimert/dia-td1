@@ -13,6 +13,14 @@ Le protocole est en texte et il utilise le port 8123 en TCP. C'est un cache mém
 * `GET <key>\n` : pour la clé `<key>` renvoie au client la longueur de la chaine de caractères associé suivie d’un saut de ligne puis la chaine associé. Renvoie `0\n` si la clé est inexistante;
 * `DEL <key>\n` : supprime la clé / valeur `<key>`. Renvoie au client `ok\n` en cas de succès ou `ko\n` sinon.
 
+## Docker
+
+Construire et lancer l'image Docker
+
+    docker build -t dia .
+    docker create -it --name dia  dia bash
+    docker start -ai dia
+
 ## Implémentation
 
 Commencer par cloner ce dépôt :
