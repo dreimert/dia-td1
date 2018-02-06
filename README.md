@@ -15,6 +15,10 @@ Le protocole est en texte et il utilise le port 8123 en TCP. C'est un cache mém
 
 ## Implémentation
 
+Commencer par cloner ce dépôt :
+
+    git clone https://github.com/dreimert/dia-td1
+
 En Node.js, la librairie standard ***net*** permet de manipuler facilement les sockets : https://nodejs.org/api/net.html.
 
 Vous pouvez implémenter votre serveur dans le fichier `server.js`.
