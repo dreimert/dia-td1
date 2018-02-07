@@ -30,7 +30,7 @@ Commencer par cloner ce dépôt :
 
     git clone https://github.com/dreimert/dia-td1
 
-En Node.js, la librairie standard ***net*** permet de manipuler facilement les sockets : https://nodejs.org/api/net.html.
+En Node.js, la librairie standard ***net*** permet de manipuler facilement les sockets : https://nodejs.org/api/net.html. Vous trouverez plusieurs exemples de codes sur cette page.
 
 Vous pouvez implémenter votre serveur dans le fichier `server.js`.
 
@@ -38,9 +38,7 @@ Pour lancer le server :
 
     node server.js
 
-`npm install` va installer les dépendances listées dans le `package.json`. Dans notre cas, `nodemon` qui permet de recharger un fichier quand il est modifié.
-
-`npm start` lance la commande `start` définie dans le `package.json`, ici `nodemon server.js`.
+Si vous êtes sur votre propre machine, vous pouvez faire `npm install` qui va installer les dépendances listées dans le `package.json`. Dans notre cas, `nodemon` qui permet de recharger un fichier quand il est modifié. Et pour lancer le serveur `npm start` lance la commande `start` définie dans le `package.json`, ici `nodemon server.js`. Votre serveur ce relancera automatiquement quand vous sauvegarderez le ficher.
 
 ## Test
 
@@ -51,10 +49,14 @@ Vous pouvez tester directement via :
 Ou en utilisant des tests déjà écrits par moi-même :
 
     node client.js
+    
+## Par où commencer ?
+
+Commencez par implémenter un serveur minimaliste en utilisant les exemples de la documentation. Ensuite, intéressez-vous à l'événement `'data'`. Pour afficher une variable, `console.log(JSON.stringify(maVariable))` permet de voir exectement ce que contient la variable comme données.
 
 ## Ce que je dois retenir
 
-Ce que vous venez de coder est une base extrêmement simple pour un serveur web par exemple. Maintenant, on ne s'amuse pas coder ce genre de chose tous les jours. On va utiliser un outil qui va nous simplifier la vie comme [Express](http://expressjs.com/fr/) en Node.js. Si maintenant votre application a besoin de gérer de manière fine l'échange de ses données, on verra au TD2 comment utiliser [ØMQ](http://zeromq.org/).
+Ce que vous venez de coder est une base extrêmement simple pour un serveur web par exemple. Maintenant, on ne s'amuse pas coder ce genre de choses tous les jours. On va utiliser un outil qui va nous simplifier la vie comme [Express](http://expressjs.com/fr/) en Node.js. Si maintenant votre application a besoin de gérer de manière fine l'échange de ses données, on verra au TD2 comment utiliser [ØMQ](http://zeromq.org/).
 
 Un autre élément à retenir est que l'on ne vous parle pas de multithreading ici car Node.js est mono-thread. Du coup, vous n'avez pas de problèmes de lock de données sur un même processus.
 
