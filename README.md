@@ -37,6 +37,10 @@ Le protocole est en texte et il utilise le port 8123 en TCP. C'est un cache mém
 Commencer par cloner ce dépôt :
 
     git clone https://github.com/dreimert/dia-td1
+    
+Et vous déplacer dedans :
+
+    cd dia-td1
 
 En Node.js, la librairie standard ***net*** permet de manipuler facilement les sockets : https://nodejs.org/api/net.html. Vous trouverez plusieurs exemples de codes sur cette page.
 
@@ -44,9 +48,14 @@ Vous pouvez implémenter votre serveur dans le fichier `server.js`.
 
 Pour lancer le server :
 
+    npm install
+    npm start
+    
+Si vous n'avez pas réussi à configurer correctement npm, vous pouvez directement utiliser node :
+
     node server.js
 
-Si vous êtes sur votre propre machine, vous pouvez faire `npm install` qui va installer les dépendances listées dans le `package.json`. Dans notre cas, `nodemon` qui permet de recharger un fichier quand il est modifié. Et pour lancer le serveur `npm start` lance la commande `start` définie dans le `package.json`, ici `nodemon server.js`. Votre serveur ce relancera automatiquement quand vous sauvegarderez le ficher.
+`npm install` va installer les dépendances listées dans le `package.json`. Dans notre cas, `nodemon` qui permet de recharger un fichier quand il est modifié. Votre serveur se relancera automatiquement quand vous sauvegarderez le ficher. Dans le cas où vous lancez directement avec `node server.js`, il faudra relancer le serveur à chaque modification.
 
 ## Test
 
@@ -55,6 +64,10 @@ Vous pouvez tester directement via :
     telnet localhost 8123
 
 Ou en utilisant des tests déjà écrits par moi-même :
+
+    npm test
+    
+Ou
 
     node client.js
     
