@@ -14,7 +14,7 @@ Télécharger les binaires et les décompresser :
 Mettre à jour votre PATH :
 
     echo "export PATH=$PATH:$(pwd)/node-v8.9.4-linux-x64/bin/" > ~/.bashrc
-    
+
 Recharger vos variables d'environnement :
 
     . ~/.bashrc
