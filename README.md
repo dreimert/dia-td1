@@ -6,14 +6,22 @@ L'objectif de ce TD est de développer un serveur TCP minimaliste répondant à 
 
 ## Installation de node
 
-Télécherger les binaires depuis : https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
+Télécharger les binaires et les décompresser :
 
     wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
     tar -xJvf node-v8.9.4-linux-x64.tar.xz
+    
+Mettre à jour votre PATH :
 
-Pour exécuter node, ajouter le binaire dans votre path ou :
+    echo "export PATH=$PATH:$(pwd)/node-v8.9.4-linux-x64/bin/" > ~/.bashrc
+    
+Recharger vos variables d'environnement :
 
-    ./node-v8.9.4-linux-x64/bin/node
+    . ~/.bashrc
+
+Vérifier que node s'exécute bien :
+
+    node --version
 
 ## Protocole
 
