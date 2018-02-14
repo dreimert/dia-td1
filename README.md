@@ -48,7 +48,7 @@ Vous pouvez implémenter votre serveur dans le fichier `server.js`.
 
 Pour lancer le server :
 
-    npm install
+    npm install nodemon
     npm start
     
 Si vous n'avez pas réussi à configurer correctement npm, vous pouvez directement utiliser node :
