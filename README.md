@@ -77,7 +77,7 @@ Commencez par implémenter un serveur minimaliste en utilisant les exemples de l
 
 ## Ce que je dois retenir
 
-Ce que vous venez de coder est une base extrêmement simple pour un serveur web par exemple. Maintenant, on ne s'amuse pas coder ce genre de choses tous les jours. On va utiliser un outil qui va nous simplifier la vie comme [Express](http://expressjs.com/fr/) en Node.js. Si maintenant votre application a besoin de gérer de manière fine l'échange de ses données, on verra au TD2 comment utiliser [ØMQ](http://zeromq.org/).
+Ce que vous venez de coder est une base extrêmement simple pour un serveur web par exemple. Maintenant, on ne s'amuse pas coder ce genre de choses tous les jours. On va utiliser un outil qui va nous simplifier la vie comme [Express](http://expressjs.com/fr/) en Node.js.
 
 Un autre élément à retenir est que l'on ne vous parle pas de multithreading ici car Node.js est mono-thread. Du coup, vous n'avez pas de problèmes de lock de données sur un même processus.
 
