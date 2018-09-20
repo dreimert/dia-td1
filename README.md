@@ -8,12 +8,12 @@ L'objectif de ce TD est de développer un serveur TCP minimaliste répondant à 
 
 Télécharger les binaires et les décompresser :
 
-    wget https://nodejs.org/dist/v8.9.4/node-v8.9.4-linux-x64.tar.xz
-    tar -xJvf node-v8.9.4-linux-x64.tar.xz
+    wget https://nodejs.org/dist/v8.12.0/node-v8.12.0-linux-x64.tar.xz
+    tar -xJvf node-v8.12.0-linux-x64.tar.xz
     
 Mettre à jour votre PATH :
 
-    echo "export PATH=$PATH:$(pwd)/node-v8.9.4-linux-x64/bin/" >> ~/.bashrc
+    echo "export PATH=$PATH:$(pwd)/node-v8.12.0-linux-x64/bin/" >> ~/.bashrc
 
 Recharger vos variables d'environnement :
 
