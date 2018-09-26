@@ -61,7 +61,9 @@ Si vous n'avez pas réussi à configurer correctement npm, vous pouvez directeme
 
 Vous pouvez tester directement via :
 
-    telnet localhost 8123
+    netcat localhost 8123
+    
+Sur les systèmes plus anciens, vous pouvez remplacer `netcat` par `telnet`.
 
 Ou en utilisant des tests déjà écrits par moi-même :
 
